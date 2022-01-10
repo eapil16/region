@@ -5,7 +5,6 @@ testing
 node_modules
 lib-cov
 coverage
-modules
 cov-pt*
 *.seed
 *.log
@@ -18,5 +17,6 @@ cov-pt*
 *.pug
 **/test/output*
 **/test/temp
+/modules
 .release.json
 package-lock.json

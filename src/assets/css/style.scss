@@ -1,65 +1,27 @@
-/*
-	Theme Name: Colibrity-template
-	Author: Colibrity
-	Author URI: Colibrity
-	Description: Pug template
-	Version: 1.0.1
-	Text Domain: Colibrity
-	*/
-
 @font-face {
-  font-family: 'NeueMachina';
-  src: url('../fonts/NeueMachina-Bold.eot');
-  src: url('../fontsNeueMachina-Bold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/NeueMachina-Bold.svg#NeueMachina-Bold') format('svg'),
-       url('../fonts/NeueMachina-Bold.ttf') format('truetype'),
-       url('../fonts/NeueMachina-Bold.woff') format('woff'),
-       url('../fonts/NeueMachina-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'Segoe UI';
+	src: url('../fonts/SegoeUI-SemiBold.eot');
+	src: local('../fonts/Segoe UI Semibold'), local('SegoeUI-SemiBold'),
+		url('../fonts/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SegoeUI-SemiBold.woff') format('woff'),
+		url('../fonts/SegoeUI-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'NeueMachina';
-  src: url('../fonts/NeueMachina-Light.eot');
-  src: url('../fontsNeueMachina-Light.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/NeueMachina-Light.ttf') format('truetype'),
-       url('../fonts/NeueMachina-Light.woff') format('woff'),
-       url('../fonts/NeueMachina-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
+	font-family: 'Segoe UI';
+	src: url('../fonts/SegoeUI.eot');
+	src: local('../fonts/Segoe UI'), local('SegoeUI'),
+		url('../fonts/SegoeUI.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SegoeUI.woff') format('woff'),
+		url('../fonts/SegoeUI.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
-@font-face {
-  font-family: 'NeueMachina';
-  src: url('../fonts/NeueMachina-Medium.eot');
-  src: url('../fontsNeueMachina-Medium.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/NeueMachina-Medium.ttf') format('truetype'),
-       url('../fonts/NeueMachina-Medium.woff') format('woff'),
-       url('../fonts/NeueMachina-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NeueMachina';
-  src: url('../fonts/NeueMachina-Black.eot');
-  src: url('../fontsNeueMachina-Black.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/NeueMachina-Black.ttf') format('truetype'),
-       url('../fonts/NeueMachina-Black.woff') format('woff'),
-       url('../fonts/NeueMachina-Black.woff2') format('woff2');
-  font-weight: 800;
-  font-style: normal;
-}
-
-/* Box sizing rules */
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  color: #000000;
-}
-
-body {
-  font-family: 'NeueMachina', sans-serif; 
 }
 
 /* Remove default margin */
@@ -95,28 +57,12 @@ html:focus-within {
 }
 
 /* Set core body defaults */
-html,
 body {
-  height: 100%;
+  min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  justify-content: space-between;
-  color:#212121;
-  font-size: 14px;
-}
-
-.wrapper {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-main {
-  flex: 1 1 auto;
-}
-
-a {
-  text-decoration: none;
+  justify-content: space-between;
 }
 
 /* A elements that don't have a class get default styles */
@@ -129,8 +75,6 @@ img,
 picture {
   max-width: 100%;
   display: block;
-  width: 100%;
-  height: auto;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -141,80 +85,259 @@ select {
   font: inherit;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 a {
   &:hover {
     text-decoration: none;
   }
 }
 
-@media screen and (max-width: 1366px) {
+@media (min-width: 1200px) {
   .container {
-    max-width: 1366px !important;
+    max-width: 1170px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .header,
-  .footer {
-    .container {
-      &-fluid {
-				// padding-top: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        // padding-bottom: 20px;
+%smooth {
+  transition: all 400ms ease-in-out;
+}
+
+html {
+	min-height: 100%;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+	font-size: 14px;
+  color: #000;
+  line-height: 1.2;
+  display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	flex: auto;
+  background:#fff;
+  font-weight: normal;
+}
+header {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+main {
+	flex-grow: 1;
+	box-sizing: border-box;
+}
+footer {
+	box-sizing: border-box;
+}
+p {
+  margin: 0 0 20px;
+	font-size: 1em;
+}
+a {
+	font-size: 1em;
+  @extend %smooth;
+}
+a:hover {
+  @extend %smooth;
+}
+ol {
+	font-size: 1em;
+	padding:0;
+	margin:0;
+}
+ul {
+	font-size: 1em;
+	padding:0;
+	margin:0;
+}
+h1, h2, h3, h4, h5, h6  { 
+	color: #1A1A1A;
+	line-height: 1.2;
+	padding: 0; 
+	margin:0 0 20px 0; 
+	text-align: left;
+  font-weight: 700;
+  position: relative;
+}
+h1 { 
+  font-size:22px;
+  padding: 0 0 0 20px;
+}
+h2 { 
+  font-size:22px; 
+  padding: 0 0 0 20px;
+  &:before {
+    content:'';
+    position: absolute;
+    top:9px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius:50%;
+    background:#E4002B;
+  }
+}
+h3 { font-size:1.2em; }
+h4 { font-size:1.1em; }
+h5 { font-size:1.1em; }
+h6 { font-size:1.1em; }
+::-webkit-input-placeholder {color:#000;}
+::-moz-placeholder          {color:#000;}
+:-moz-placeholder           {color:#000;}
+:-ms-input-placeholder      {color:#000;}
+a:focus {
+  outline: none;
+}
+.btn:focus, .btn.focus {
+  outline: 0;
+  box-shadow:none;
+}
+button:focus {
+  outline: none;
+}
+p {
+  font-size: 1em;
+  line-height: 1.2;
+}
+.indent-block {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border:1px solid #ECEEF0;
+  }
+  &__full {
+    margin:40px 0;
+    padding: 0 0 40px 0;
+  }
+  &__top {
+    margin:40px 0 0 0;
+  }
+  &__bottom {
+    margin: 0 0 40px 0;
+  }
+}
+.flex {
+  display: flex;
+  &-vertically {
+    &__center {
+      align-items:center;
+    }   
+    &__bottom {
+      align-items:flex-end;
+    } 
+    &__top {
+      align-items:flex-start;
+    }
+  }
+  &-horizontally {
+    &__center {
+      justify-content: center; 
+    }
+    &__full {
+      justify-content: space-between;
+    }
+    &__end {
+      justify-content: flex-end;
+    }
+  }
+}
+.button {
+  padding: 15px 30px 14px;
+  border-radius:7px;
+  font-size: 14px; 
+  @extend %smooth;
+  min-width:140px;
+   border-radius:0;
+  &:hover {
+    @extend %smooth;
+  }
+  &-black {
+    color:#ffff;
+    border:1px solid #1A1A1A;
+    background:#1A1A1A;
+    &:hover {
+      background:#E4002B;
+      color:#ffff;
+      border:1px solid #E4002B;
+    }
+  }
+}
+
+.header {
+  &-top {
+    width: 100%;
+    border-bottom: 1px solid #ECECEC;
+    padding: 15px 0;
+    p {
+      font-weight: 600;
+      margin: 0;
+    }
+    svg {
+      margin: 0 10px 0 0;
+    }
+    &__right {
+      &_item {
+        margin: 0 0 0 30px;
+        a.phone {
+          color:#000000;
+          font-weight: 600;
+          text-decoration: none;
+          &:hover {
+            color:#F07E00;
+            text-decoration: none;
+          }
+        }
+        a.callback {
+          color:#000000;
+          text-decoration: none;
+          &:hover {
+            color:#F07E00;
+            text-decoration: none;
+          }
+        }
+        a.personal-area {
+          color:#000000;
+          font-weight: 600;
+          text-decoration: none;
+          &:hover {
+            color:#F07E00;
+            text-decoration: none;
+          }
+        }
       }
     }
-  }
+  }  
 }
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1199px) {
-  .container {
-    // padding-left: 0;
-    // padding-right: 0;
-    max-width: 100% !important;
-  }
+
 }
 
-@media screen and (max-width: 576px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 100% !important;
-  }
+@media screen and (max-width: 991px) {
+
 }
 
-$container-max-width: 1366px;
+@media screen and (max-width: 767px) {
 
-.swiper-slide {
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
 }
 
-.swiper-button {
-  &-prev, &-next {
-    &::after {
-      display: none;
-    }
-  }
+@media screen and (max-width: 575px) {
+
 }
-
-/*************
-* New style
-*/
-
