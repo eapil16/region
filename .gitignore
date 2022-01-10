@@ -15,6 +15,7 @@ cov-pt*
 *.pid
 *.gz
 *.pug
+*.json
 **/test/output*
 **/test/temp
 /modules
