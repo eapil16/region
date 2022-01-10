@@ -18,6 +18,7 @@ cov-pt*
 *.json
 **/test/output*
 **/test/temp
-/modules
+.modules
 .release.json
 package-lock.json
+.gitignore
