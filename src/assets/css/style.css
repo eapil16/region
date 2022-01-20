@@ -107,7 +107,7 @@ a:hover {
   }
 }
 
-a, a:hover, .button, .button:hover, .rates-block, .rates-block p, .rates-block p.caption, .rates-block p.price, .rates-block .values .icon svg path, .rates-block .values .text strong, .rates-block .values .text p, .rates-block .button, .rates-block:hover, .rates-block:hover p, .rates-block:hover p.caption, .rates-block:hover p.price, .rates-block:hover .values .icon svg path, .rates-block:hover .values .text strong, .rates-block:hover .values .text p, .rates-block:hover .button {
+a, a:hover, .button, .button:hover, .rates-block, .rates-block p, .rates-block p.caption, .rates-block p.price, .rates-block .values .icon svg path, .rates-block .values .text strong, .rates-block .values .text p, .rates-block .button, .rates-block:hover, .rates-block:hover p, .rates-block:hover p.caption, .rates-block:hover p.price, .rates-block:hover .values .icon svg path, .rates-block:hover .values .text strong, .rates-block:hover .values .text p, .rates-block:hover .button, .equipment-slider .swiper-slide, .equipment-slider .swiper-slide:hover {
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
@@ -632,5 +632,257 @@ p {
 
 .show-block {
   display: block !important;
+}
+
+.odds-block {
+  background: #F4F6F8;
+  padding: 60px 0;
+}
+
+.odds-block__item {
+  padding: 40px 35px;
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.odds-block__item p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #959595;
+  margin: 0;
+}
+
+.odds-block__item strong {
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.4em;
+  line-height: 1.4;
+  display: block;
+  margin: 20px 0 10px;
+}
+
+.container-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+      grid-template-areas: "item-1 item-1 item-1 item-3 item-3 item-3 item-4 item-4" "item-2 item-2 item-2 item-3 item-3 item-3 item-5 item-5";
+}
+
+.item-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: item-1;
+}
+
+.item-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: item-3;
+}
+
+.item-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: item-2;
+}
+
+.item-4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 2;
+  grid-area: item-4;
+}
+
+.item-5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 2;
+  grid-area: item-5;
+}
+
+.form-block {
+  border: 1xp solid #EBEBEB;
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+.form-block__image {
+  margin: -30px 0 0 0;
+}
+
+.form-block__text {
+  padding: 50px;
+}
+
+.form-block__text h2 {
+  margin: 0 0 15px 0;
+}
+
+.form-block__text p {
+  color: #959595;
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0 0 25px 0;
+}
+
+.form-block__text form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-block__text .form-control {
+  margin: 0 30px 0 0;
+}
+
+.form-control {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #D5D5D5;
+  max-width: 290px;
+  color: #000000;
+  font-size: 1em;
+  line-height: 1.4;
+  padding: 10px 0;
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border: 0;
+  border-bottom: 1px solid #D5D5D5;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.equipment-slider {
+  margin: 15px 0 0;
+}
+
+.equipment-slider .swiper-slide {
+  padding: 25px;
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+  margin: 15px 0 30px 0;
+}
+
+.equipment-slider .swiper-slide:hover {
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.equipment-slider .swiper-slide .image {
+  max-height: 160px;
+  min-height: 160px;
+  text-align: center;
+  margin: 0 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.equipment-slider .swiper-slide .image img {
+  max-height: 160px;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.equipment-slider .swiper-slide .text p {
+  font-size: 14px;
+  line-height: 19px;
+  color: #959595;
+  margin: 0 0 10px 0;
+}
+
+.equipment-slider .swiper-slide .text p.values {
+  color: #000000;
+  margin: 10px 0;
+}
+
+.equipment-slider .swiper-slide .text p.values strong {
+  font-weight: 600;
+}
+
+.equipment-slider .swiper-slide .text p.price {
+  font-weight: 600;
+  margin: 15px 0 5px 0;
+  color: #000;
+}
+
+.equipment-slider .swiper-slide .text p.price strong {
+  font-size: 2em;
+}
+
+.equipment-slider .swiper-slide .text p.rent {
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.equipment-slider .swiper-slide .text p.rent svg {
+  margin: 0 0 0 10px;
+}
+
+.equipment-slider .swiper-slide .text a.link {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.equipment-slider .swiper-slide .text a.link:hover {
+  color: #F07E00;
+  text-decoration: none;
+}
+
+.equipment-slider .swiper-slide .text .button {
+  width: 100%;
+}
+
+.equipment-slider .swiper-slide .text .button:hover {
+  background: #F07E00;
+  color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 /*# sourceMappingURL=style.css.map */
