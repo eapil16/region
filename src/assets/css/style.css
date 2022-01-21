@@ -107,7 +107,7 @@ a:hover {
   }
 }
 
-a, a:hover, .button, .button:hover, .rates-block, .rates-block p, .rates-block p.caption, .rates-block p.price, .rates-block .values .icon svg path, .rates-block .values .text strong, .rates-block .values .text p, .rates-block .button, .rates-block:hover, .rates-block:hover p, .rates-block:hover p.caption, .rates-block:hover p.price, .rates-block:hover .values .icon svg path, .rates-block:hover .values .text strong, .rates-block:hover .values .text p, .rates-block:hover .button, .equipment-slider .swiper-slide, .equipment-slider .swiper-slide:hover, .swiper-button-prev, .swiper-button-prev:hover, .swiper-button-next, .swiper-button-next:hover, #button, #button:active, #button:hover {
+a, a:hover, .button, .button:hover, .rates-block, .rates-block p, .rates-block p.caption, .rates-block p.price, .rates-block .values .icon svg path, .rates-block .values .text strong, .rates-block .values .text p, .rates-block .button, .rates-block:hover, .rates-block:hover p, .rates-block:hover p.caption, .rates-block:hover p.price, .rates-block:hover .values .icon svg path, .rates-block:hover .values .text strong, .rates-block:hover .values .text p, .rates-block:hover .button, .equipment-slider .swiper-slide, .equipment-slider .swiper-slide:hover, .swiper-button-prev, .swiper-button-prev:hover, .swiper-button-next, .swiper-button-next:hover, #button, #button:active, #button:hover, .page-link, .page-link svg path, .page-link:hover, .page-link:hover svg path, .page-link-active, .page-link-active svg path {
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
@@ -1270,5 +1270,138 @@ p {
 
 .form-block__text_indent {
   padding: 50px 0 50px 40px;
+}
+
+.inside-block .news-block {
+  margin: 0 0 30px 0;
+}
+
+.pagination {
+  margin: 40px 0 60px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.page-item {
+  margin: 0 7px 0 0;
+}
+
+.page-link {
+  background: #F4F6F8;
+  width: 33px;
+  height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000;
+  border: 0;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 5px !important;
+}
+
+.page-link svg path {
+  fill: #000;
+}
+
+.page-link:hover {
+  background: #F07E00;
+  color: #fff;
+}
+
+.page-link:hover svg path {
+  fill: #fff;
+}
+
+.page-link-active {
+  background: #F07E00;
+  color: #fff;
+}
+
+.page-link-active svg path {
+  fill: #fff;
+}
+
+.inside-block__text p {
+  font-size: 1em;
+  line-height: 1.4;
+  color: #959595;
+  margin: 0;
+}
+
+a.download {
+  color: #F07E00;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+a.download svg {
+  margin: 0 10px 0 0;
+}
+
+a.download:hover {
+  color: #F07E00;
+  text-decoration: underline;
+}
+
+.table-block {
+  padding: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.table-block table {
+  width: 100%;
+}
+
+.table-block table td {
+  width: 33%;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #000000;
+  padding: 15px 10px;
+}
+
+.table-block table td:first-child {
+  padding: 15px 10px 15px 0;
+}
+
+.table-block table tr {
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.table-block table tr:first-child {
+  border-bottom: 2px solid #000000;
+}
+
+.table-block table tr:first-child td {
+  font-weight: 600;
+}
+
+.table-block table tr:last-child {
+  border-bottom: 0;
+}
+
+.advantages-item {
+  margin: 0 0 30px 0;
+}
+
+.advantages-item p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #000;
+  font-weight: 600;
+  margin: 20px 0 0 0;
+  max-width: 240px;
 }
 /*# sourceMappingURL=style.css.map */
