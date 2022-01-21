@@ -14,12 +14,40 @@ document.addEventListener('DOMContentLoaded', () => {
     var swiper = new Swiper(".equipment-slider", {
       slidesPerView: 4,
       spaceBetween: 30,
-      loop: true,
+      loop: false,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".equipment-next",
+        prevEl: ".equipment-prev",
       },
     });
-  
+
+    var swiper = new Swiper(".services-slider", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: false,
+      navigation: {
+        nextEl: ".services-next",
+        prevEl: ".services-prev",
+      },
+    });
+    
+    var btn = $('#button');
+
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function(e) {
+      $('body,html').animate({
+         scrollTop: 0
+       }, 0);
+       return false;        
+    });
+
+
 
 });
