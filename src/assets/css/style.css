@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Segoe UI';
   src: url("../fonts/SegoeUI-SemiBold.eot");
@@ -1403,5 +1404,62 @@ a.download:hover {
   font-weight: 600;
   margin: 20px 0 0 0;
   max-width: 240px;
+}
+
+.table-block__full td {
+  width: 50%;
+}
+
+.table-block__full td:last-child {
+  text-align: right;
+}
+
+.set {
+  display: block;
+  padding: 60px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #F4F6F8;
+  border-radius: 20px;
+}
+
+.set h2 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.set ol {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  counter-reset: num;
+  display: block;
+}
+
+.set ol li {
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  font-weight: 600;
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 30px;
+  position: relative;
+}
+
+.set ol li:before {
+  content: "0" counter(num) ".";
+  /* Выводим число */
+  counter-increment: num;
+  /* Увеличиваем значение счётчика */
+  color: #F07E00;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */
