@@ -107,7 +107,7 @@ a:hover {
   }
 }
 
-a, a:hover, .button, .button:hover, .rates-block, .rates-block p, .rates-block p.caption, .rates-block p.price, .rates-block .values .icon svg path, .rates-block .values .text strong, .rates-block .values .text p, .rates-block .button, .rates-block:hover, .rates-block:hover p, .rates-block:hover p.caption, .rates-block:hover p.price, .rates-block:hover .values .icon svg path, .rates-block:hover .values .text strong, .rates-block:hover .values .text p, .rates-block:hover .button, .equipment-slider .swiper-slide, .equipment-slider .swiper-slide:hover {
+a, a:hover, .button, .button:hover, .rates-block, .rates-block p, .rates-block p.caption, .rates-block p.price, .rates-block .values .icon svg path, .rates-block .values .text strong, .rates-block .values .text p, .rates-block .button, .rates-block:hover, .rates-block:hover p, .rates-block:hover p.caption, .rates-block:hover p.price, .rates-block:hover .values .icon svg path, .rates-block:hover .values .text strong, .rates-block:hover .values .text p, .rates-block:hover .button, .equipment-slider .swiper-slide, .equipment-slider .swiper-slide:hover, .swiper-button-prev, .swiper-button-prev:hover, .swiper-button-next, .swiper-button-next:hover {
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
@@ -782,7 +782,13 @@ p {
           box-shadow: none;
 }
 
+.equipment-content {
+  margin: 0 -15px;
+  position: relative;
+}
+
 .equipment-slider {
+  padding: 0 15px;
   margin: 15px 0 0;
 }
 
@@ -791,6 +797,7 @@ p {
   -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
   margin: 15px 0 30px 0;
+  border-radius: 10px;
 }
 
 .equipment-slider .swiper-slide:hover {
@@ -844,6 +851,8 @@ p {
 
 .equipment-slider .swiper-slide .text p.price strong {
   font-size: 2em;
+  display: inline-block;
+  margin: 0 5px 0 0;
 }
 
 .equipment-slider .swiper-slide .text p.rent {
@@ -884,5 +893,31 @@ p {
   color: #fff;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.swiper-button-prev {
+  width: 15px;
+  height: 30px;
+  background: url(../images/arrow.svg) center center no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: -35px;
+  opacity: 0.3;
+}
+
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.swiper-button-next {
+  width: 15px;
+  height: 30px;
+  background: url(../images/arrow.svg) center center no-repeat;
+  right: -35px;
+  opacity: 0.3;
+}
+
+.swiper-button-next:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
