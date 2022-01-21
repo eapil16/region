@@ -17,6 +17,7 @@ cov-pt*
 *.pug
 *.json
 *.scss
+*.map
 **/test/output*
 **/test/temp
 modules
