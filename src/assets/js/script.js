@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (e.target.closest('#switches-apartment')) {
             document.querySelector('.to-house').classList.remove('hidden-block'); 
-          }
-        
+        }
+        if(e.target.closest('#city-close')) {
+          document.querySelector('.city-block ').classList.add('hidden-block'); 
+        }
     });
 
     var swiper = new Swiper(".equipment-slider", {
@@ -48,6 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
        return false;        
     });
 
-
+    let $i = 0; 
+    $('.menu-toggle-cont').click(function () { 
+      $('.search-hidden').slideUp();
+      if ($i == 0) { 
+        $(this).addClass('menu-toggle-cont_active'); 
+        $('.fixed-menu').slideDown('fast'); 
+        $('body').addClass('hidd'); 
+        $i = 1; 
+      } else { 
+        $(this).removeClass('menu-toggle-cont_active'); 
+        $('.fixed-menu').slideUp('fast'); 
+        $i = 0; 
+        $('body').removeClass('hidd'); 
+      } 
+    });
+  
 
 });
