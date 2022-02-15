@@ -11,26 +11,51 @@ document.addEventListener('DOMContentLoaded', () => {
         if(e.target.closest('#city-close')) {
           document.querySelector('.city-block ').classList.add('hidden-block'); 
         }
+        if(e.target.closest('.city-button')) {
+          document.querySelector('.city-block ').classList.remove('hidden-block'); 
+        }
     });
 
     var swiper = new Swiper(".equipment-slider", {
-      slidesPerView: 4,
+      slidesPerView: 1,
       spaceBetween: 30,
       loop: false,
       navigation: {
         nextEl: ".equipment-next",
         prevEl: ".equipment-prev",
       },
+      breakpoints: {
+        767: {
+          slidesPerView: 1,
+        },
+        991: {
+          slidesPerView: 2,
+        },
+        1199: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        }
+      }
     });
 
     var swiper = new Swiper(".services-slider", {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 30,
       loop: false,
       navigation: {
         nextEl: ".services-next",
         prevEl: ".services-prev",
       },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+        }
+      }
     });
     
     var btn = $('#button');
