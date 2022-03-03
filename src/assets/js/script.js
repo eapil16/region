@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if(e.target.closest('.city-button')) {
           document.querySelector('.city-block ').classList.remove('hidden-block'); 
         }
+        if(e.target.closest('.city-button')) {
+          document.querySelector('.city-block ').style.display = "block"; 
+        }
         if(e.target.closest('.tv-int')) {
           document.querySelector('.to-iptv').classList.remove('hidden-block'); 
           document.querySelector('.tab-content-iptv').classList.remove('hidden-block'); 
