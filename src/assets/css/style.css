@@ -4853,3 +4853,48 @@ p.rates-info span {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+/* styles 16/06 */
+.top-banner {
+  background: #FFEFDC;
+  position: relative;
+  padding: 12px 0 14px;
+}
+.top-banner p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 20px;
+  font-weight: 600;
+  color: #141414;
+  text-align: center;
+}
+.top-banner p a.link {
+  color: #F07E00;
+  text-decoration: underline;
+  display: inline-block;
+  margin: 0 0 0 7px;
+  transition: all 400ms ease-in-out;
+}
+.top-banner p a.link:hover {
+  color: #F07E00;
+  text-decoration: none;
+  transition: all 400ms ease-in-out;
+}
+.top-banner__close {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  font-size: 30px;
+  line-height: 30px;
+  color: #D9C0A2;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  transition: all 400ms ease-in-out;
+}
+.top-banner__close:hover {
+  transition: all 400ms ease-in-out;
+  color: #F07E00;
+}
+
+/* end styles 16/06 */

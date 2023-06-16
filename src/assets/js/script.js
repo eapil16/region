@@ -225,4 +225,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
+    $('.top-banner__close').click(function () { 
+      $('.top-banner').slideUp();
+    });
+
 });
